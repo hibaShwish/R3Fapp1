@@ -1,4 +1,4 @@
-# Hiba Shawish - Fullstack Developer
+# Hiba Shawish - Frontend Developer
 
 Hello! 👋 I'm Hiba Shawish 🚀, a passionate web developer specialized in **Frontend** with solid experience in **Backend**. I enjoy building modern user interfaces and full-featured web applications.
 
