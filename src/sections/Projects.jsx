@@ -31,7 +31,7 @@ const Projects = () => {
 
   return (
     <section className="c-space my-20">
-      <p className="head-text">My Selected Work</p>
+      <p className="head-text">Lorem ipsum </p>
 
       <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
         <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
@@ -63,7 +63,7 @@ const Projects = () => {
   className="flex items-center gap-2 cursor-pointer text-white-600"
   href="javascript:void(0)"
 >
-  <p>Check Live Site</p>
+  <p>Lorem ipsum </p>
   <img src={`${import.meta.env.BASE_URL}assets/arrow-up.png`} alt="arrow" className="w-3 h-3" />
 </a>
 </div>

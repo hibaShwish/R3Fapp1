@@ -42,10 +42,9 @@ const About = () => {
               className="w-full sm:h-[276px] h-fit object-contain"
             />
             <div>
-              <p className="grid-headtext">Tech Stack</p>
+              <p className="grid-headtext">Lorem ipsum </p>
               <p className="grid-subtext">
-                I specialize in a variety of languages, frameworks, and tools that allow me to build robust and scalable
-                applications.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
               </p>
             </div>
           </div>
@@ -69,7 +68,7 @@ const About = () => {
               />
             </div>
             <div>
-              <p className="grid-headtext">I’m very flexible with time zone communications & locations</p>
+              <p className="grid-headtext">Lorem ipsum </p>
               <p className="grid-subtext">I&apos;m based in Amman , Jordan and open to remote work worldwide.</p>
 
               <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
@@ -110,7 +109,7 @@ const About = () => {
                   alt="copy"
                 />
                 <p className="lg:text-1xl md:text-xl font-medium text-gray_gradient text-white">
-                  hebah-shawish@outlook.com
+           hebahshaweish@gmail.com
                 </p>
               </div>
             </div>
