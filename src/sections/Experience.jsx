@@ -20,12 +20,12 @@ const WorkExperience = () => {
               <ambientLight intensity={7} />
               <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
               <directionalLight position={[10, 10, 10]} intensity={1} />
-              {/* maxPolarAngle  : prevents you from looking beneath the model but you can look in front or other side */}
+              {/* maxPolarAngle prevents looking beneath the model */}
               <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
-{/* suspense if loading takes  bit longer  */}
+              {/* Suspense for loading */}
               <Suspense fallback={<CanvasLoader />}>
-              {/* our avatar custom */}
-                <Developer position-y={-3} scale={3} animationName={animationName} />
+                {/* corrected position prop */}
+                <Developer position={[0, -3, 0]} scale={3} animationName={animationName} />
               </Suspense>
             </Canvas>
           </div>
@@ -38,10 +38,11 @@ const WorkExperience = () => {
                   onClick={() => setAnimationName(item.animation.toLowerCase())}
                   onPointerOver={() => setAnimationName(item.animation.toLowerCase())}
                   onPointerOut={() => setAnimationName('idle')}
-                  className="work-content_container group" >
+                  className="work-content_container group"
+                >
                   <div className="flex flex-col h-full justify-start items-center py-2">
                     <div className="work-content_logo">
-                      <img className="w-full h-full" src={item.icon} alt="" />
+                      <img className="w-full h-full" src={item.icon} alt={`${item.name} logo`} />
                     </div>
 
                     <div className="work-content_bar" />

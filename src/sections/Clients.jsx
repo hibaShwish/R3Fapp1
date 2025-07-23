@@ -9,20 +9,29 @@ const Clients = () => {
         {clientReviews.map((item) => (
           <div key={`review-${item.id}`} className="client-review">
             <div>
-              <p className="text-white-800 font-light">{item.review}</p>
+              <p className="text-white font-light">{item.review}</p>
 
               <div className="client-content">
                 <div className="flex gap-3">
-                  <img src={item.img} alt="reviewer" className="w-12 h-12 rounded-full" />
+                  <img
+                    src={`${import.meta.env.BASE_URL}${item.img}`}
+                    alt={`${item.name} photo`}
+                    className="w-12 h-12 rounded-full"
+                  />
                   <div className="flex flex-col">
-                    <p className="font-semibold text-white-800">{item.name}</p>
-                    <p className="text-white-500 md:text-base text-sm font-light">{item.position}</p>
+                    <p className="font-semibold text-white">{item.name}</p>
+                    <p className="text-gray-500 md:text-base text-sm font-light">{item.position}</p>
                   </div>
                 </div>
 
                 <div className="flex self-end items-center gap-2">
                   {Array.from({ length: 5 }).map((_, index) => (
-                    <img key={index} src="/assets/star.png" alt="star" className="w-5 h-5" />
+                    <img
+                      key={index}
+                      src={`${import.meta.env.BASE_URL}assets/star.png`}
+                      alt="star"
+                      className="w-5 h-5"
+                    />
                   ))}
                 </div>
               </div>

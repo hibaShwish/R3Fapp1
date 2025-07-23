@@ -1,17 +1,16 @@
 import { useState } from 'react';
 import Globe from 'react-globe.gl';
-
 import Button from '../components/Button.jsx';
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(' hebah-shawish@outlook.com');
-    setHasCopied(true);  // setHasCopied custom function or state updater function created using React's useState hook.
+    navigator.clipboard.writeText('hebah-shawish@outlook.com');
+    setHasCopied(true);
 
     setTimeout(() => {
-      setHasCopied(false);  // reset hastocopy to false to it status back
+      setHasCopied(false);
     }, 2000);
   };
 
@@ -20,8 +19,11 @@ const About = () => {
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
-            <img src="assets/grid1.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
-
+            <img
+              src={`${import.meta.env.BASE_URL}assets/grid1.png`}
+              alt="grid-1"
+              className="w-full sm:h-[276px] h-fit object-contain"
+            />
             <div>
               <p className="grid-headtext">Hi, I’m Hiba Shawish</p>
               <p className="grid-subtext">
@@ -34,13 +36,16 @@ const About = () => {
 
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
-            <img src="assets/grid2.png" alt="grid-2" className="w-full sm:h-[276px] h-fit object-contain" />
-
+            <img
+              src={`${import.meta.env.BASE_URL}assets/grid2.png`}
+              alt="grid-2"
+              className="w-full sm:h-[276px] h-fit object-contain"
+            />
             <div>
               <p className="grid-headtext">Tech Stack</p>
               <p className="grid-subtext">
                 I specialize in a variety of languages, frameworks, and tools that allow me to build robust and scalable
-                applications
+                applications.
               </p>
             </div>
           </div>
@@ -58,31 +63,32 @@ const About = () => {
                 showGraticules
                 globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
                 bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
-                labelsData={[{ lat: 31.999957714573213 , lng: 36.06591718729535, text: 'Amman , Jordan', color: 'white', size: 15 }]}
+                labelsData={[
+                  { lat: 31.999957714573213, lng: 36.06591718729535, text: 'Amman , Jordan', color: 'white', size: 15 },
+                ]}
               />
             </div>
             <div>
               <p className="grid-headtext">I’m very flexible with time zone communications & locations</p>
               <p className="grid-subtext">I&apos;m based in Amman , Jordan and open to remote work worldwide.</p>
-              {/* a custom prop passed to a component, commonly used to apply CSS classes dynamically to a container element. The exact behavior depends on how the component using it is implemented.
 
-Here’s an example of how containerClass might be used in a React component: */}
-
-              <Button name="Contact Me" isBeam containerClass="w-full mt-10" />  
-              
+              <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
             </div>
           </div>
         </div>
 
         <div className="xl:col-span-2 xl:row-span-3">
           <div className="grid-container">
-            <img src="assets/grid3.png" alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain" />
-
+            <img
+              src={`${import.meta.env.BASE_URL}assets/grid3.png`}
+              alt="grid-3"
+              className="w-full sm:h-[266px] h-fit object-contain"
+            />
             <div>
               <p className="grid-headtext">My Passion for Coding</p>
               <p className="grid-subtext">
-                I love solving problems and building things through code. Programming isn&apos;t just my
-                profession—it&apos;s my passion. I enjoy exploring new technologies, and enhancing my skills.
+                I love solving problems and building things through code. Programming isn&apos;t just my profession—it&apos;s
+                my passion. I enjoy exploring new technologies, and enhancing my skills.
               </p>
             </div>
           </div>
@@ -91,16 +97,21 @@ Here’s an example of how containerClass might be used in a React component: */
         <div className="xl:col-span-1 xl:row-span-2">
           <div className="grid-container">
             <img
-              src="assets/grid4.png"
+              src={`${import.meta.env.BASE_URL}assets/grid4.png`}
               alt="grid-4"
               className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top"
             />
 
             <div className="space-y-2">
               <p className="grid-subtext text-center">Contact me</p>
-              <div className="copy-container"  onClick={handleCopy}>
-                <img src={hasCopied?'assets/tick.svg':'assets/copy.svg'} alt="copy"/>
-                <p className="lg:text-1xl md:text-xl font-medium text-gray_gradient text-white">hebah-shawish@outlook.com</p>
+              <div className="copy-container cursor-pointer flex items-center justify-center gap-3" onClick={handleCopy}>
+                <img
+                  src={hasCopied ? `${import.meta.env.BASE_URL}assets/tick.svg` : `${import.meta.env.BASE_URL}assets/copy.svg`}
+                  alt="copy"
+                />
+                <p className="lg:text-1xl md:text-xl font-medium text-gray_gradient text-white">
+                  hebah-shawish@outlook.com
+                </p>
               </div>
             </div>
           </div>
