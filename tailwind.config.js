@@ -24,7 +24,7 @@ export default {
         },
       },
       backgroundImage: {
-        terminal: "url('/assets/terminal.png')",
+     terminal: `url('${import.meta.env.BASE_URL}assets/terminal.png')`,
       },
     },
   },

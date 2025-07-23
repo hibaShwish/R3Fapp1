@@ -59,23 +59,25 @@ const Projects = () => {
               ))}
             </div>
 
-            <a
-              className="flex items-center gap-2 cursor-pointer text-white-600"
-              href="javascript:void(0)"
-             >
-              <p>Check Live Site</p>
-              <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
-            </a>
-          </div>
+    <a
+  className="flex items-center gap-2 cursor-pointer text-white-600"
+  href="javascript:void(0)"
+>
+  <p>Check Live Site</p>
+  <img src={`${import.meta.env.BASE_URL}assets/arrow-up.png`} alt="arrow" className="w-3 h-3" />
+</a>
+</div>
 
-          <div className="flex justify-between items-center mt-7">
-            <button className="arrow-btn" onClick={() => handleNavigation('previous')}>
-              <img src="/assets/left-arrow.png" alt="left arrow" />
-            </button>
+<div className="flex justify-between items-center mt-7">
+  <button className="arrow-btn" onClick={() => handleNavigation('previous')}>
+    <img src={`${import.meta.env.BASE_URL}assets/left-arrow.png`} alt="left arrow" />
+  </button>
 
-            <button className="arrow-btn" onClick={() => handleNavigation('next')}>
-              <img src="/assets/right-arrow.png" alt="right arrow" className="w-4 h-4" />
-            </button>
+  <button className="arrow-btn" onClick={() => handleNavigation('next')}>
+    <img src={`${import.meta.env.BASE_URL}assets/right-arrow.png`} alt="right arrow" className="w-4 h-4" />
+  </button>
+
+
           </div>
         </div>
 
